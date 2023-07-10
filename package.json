@@ -1,0 +1,36 @@
+{
+  "scripts": {
+    "edgio:dev": "edgio dev",
+    "edgio:build": "edgio build",
+    "edgio:deploy": "edgio deploy",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./app.js",
+    "start": "node ./app.js"
+  },
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@edgio/express": "^7.0.24",
+    "@myno_21/pinterest-scraper": "^1.0.4",
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "fg-twitter": "^0.0.9",
+    "koishi-plugin-twitter-images-videos": "^1.0.11",
+    "snapsave-downloader": "^6.9.5",
+    "twit": "^2.2.11",
+    "twitter-url-direct": "^1.0.9"
+  },
+  "devDependencies": {
+    "@edgio/cli": "^7.0.24",
+    "@edgio/core": "^7.0.24",
+    "@edgio/devtools": "^7.0.24",
+    "@edgio/prefetch": "^7.0.24"
+  }
+}
