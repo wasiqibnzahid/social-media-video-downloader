@@ -19,18 +19,17 @@
     "@edgio/express": "^7.0.24",
     "@myno_21/pinterest-scraper": "^1.0.4",
     "axios": "^1.4.0",
+    "cheerio": "^1.0.0-rc.12",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "fg-twitter": "^0.0.9",
-    "cheerio": "^1.0.0-rc.12",
     "got": "^12.6.0",
-    
     "koishi-plugin-twitter-images-videos": "^1.0.11",
     "netlify-cli": "^15.8.1",
     "netlify-lambda": "^2.0.16",
     "serverless-http": "^3.2.0",
     "snapsave-downloader": "^6.9.5",
-    "twit": "^2.2.11",
+    "tiktok-scraper-ts": "^1.4.1",
     "twitter-url-direct": "^1.0.9"
   },
   "devDependencies": {

@@ -7,6 +7,8 @@ const axios = require("axios");
 const serverless = require("serverless-http");
 const app = express();
 const router = express.Router();
+const TikTokScraper = import("tiktok-scraper-ts");
+
 const PORT = process.env.PORT || 3001;
 
 app.use(
@@ -42,6 +44,23 @@ router.get("/facebook", async (req, res) => {
   try {
     let URL = await snapsave(url);
     res.send(URL);
+  } catch (e) {
+    res.status(500).send("Unable to fetch video using this url");
+    console.error(e);
+  }
+});
+router.get("/tiktok", async (req, res) => {
+  const url = req.query.url;
+  if (!url || typeof url !== "string") {
+    res.status(400).send("Please enter a valid url");
+    return;
+  }
+  try {
+    // const URL = await Tikchan.download(url);
+    const scraperParent = await TikTokScraper;
+    const scraper = new scraperParent.TTScraper();
+    const URL = await scraper.video(url, true);
+    res.send({ ...URL, url });
   } catch (e) {
     res.status(500).send("Unable to fetch video using this url");
     console.error(e);
